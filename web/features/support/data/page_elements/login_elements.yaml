@@ -1,0 +1,3 @@
+username_selector: "username"
+password_selector: "password"
+login_button_selector: "button[type='submit']"

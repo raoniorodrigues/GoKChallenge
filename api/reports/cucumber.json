@@ -1,0 +1,106 @@
+[
+  {
+    "id": "consultar-cep-no-viacep",
+    "uri": "features/step_definitions/CEP_consulta.feature",
+    "keyword": "Funcionalidade",
+    "name": "Consultar CEP no ViaCEP",
+    "description": "        Como um usuário interessado em obter informações de endereços,\n        Quero fazer uma requisição para o ViaCEP com um CEP válido,\n        Para receber os detalhes do endereço.",
+    "line": 6,
+    "tags": [
+      {
+        "name": "@cep_consulta",
+        "line": 5
+      }
+    ],
+    "elements": [
+      {
+        "id": "consultar-cep-no-viacep;consultar-cep-válido",
+        "keyword": "Cenário",
+        "name": "Consultar CEP válido",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço uma requisição GET para o ViaCEP com CEP \"06325040\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/CEP_consulta_step.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 960178000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo receber os detalhes do endereço",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/CEP_consulta_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2385300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cep_consulta",
+            "line": 5
+          },
+          {
+            "name": "@cep_consulta_sucesso",
+            "line": 11
+          }
+        ]
+      },
+      {
+        "id": "consultar-cep-no-viacep;consultar-cep-inválido",
+        "keyword": "Cenário",
+        "name": "Consultar CEP inválido",
+        "description": "",
+        "line": 17,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço uma requisição GET para o ViaCEP com um CEP inválido \"03423920\"",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/CEP_consulta_step.rb:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 400867000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo receber uma resposta de erro",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/CEP_consulta_step.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cep_consulta",
+            "line": 5
+          },
+          {
+            "name": "@cep_consulta_err",
+            "line": 16
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+# Teste Ruby com Capybara e Cucumber
+
+Bem-vindo ao nosso incrível teste de automação em Ruby! Este projeto utiliza Capybara e Cucumber para automatizar as interações em nossa aplicação web.
+
+## Visão Geral
+
+Este teste verifica a funcionalidade de login e validação da página inicial do dashboard. Utilizamos o Capybara para interagir com os elementos da página e o Cucumber para escrever nossos cenários de teste em linguagem natural.
+
+## Estrutura do Projeto
+
+- **Pages**: Contém as classes para cada página da aplicação.
+  - `LoginPage`: Lida com interações na página de login.
+  - `DashboardPage`: Lida com interações na página do dashboard.
+  - `BasePage`: Contém funcionalidades básicas compartilhadas por outras páginas.
+- **Step Definitions**: Define os passos dos cenários de teste escritos em Gherkin.
+- **Support**: Contém arquivos de suporte, como o `env.rb` que configura o ambiente de teste.
+
+## Como Executar o Teste
+
+1. **Pré-requisitos**:
+   - Ruby instalado
+   - Bundler instalado (`gem install bundler`)
+
+2. **Instalação de Dependências**:
+    - Bundler instalado (`bundle install`)
+
+3. **Execução dos Testes**:
+    - No console digite (`cucumber -t @login_sucesso`)
+
+## Fluxo do Teste
+
+1. O teste começa na página de login, onde o usuário insere suas credenciais corretas.
+2. Em seguida, o usuário clica no botão de login.
+3. Após o login, o teste valida se o nome do usuário "Paul Collings" está presente na página do dashboard.
+4. Finaliza realizando o logoff e validando que está no página de login.
+
+## Observações
+
+- O arquivo `dashboard_elements.yaml` contém os seletores CSS utilizados nas páginas.
+- A classe `Validation` oferece métodos para verificar diferentes aspectos da página, como texto, CSS, URLs, etc.
+- Certifique-se de que o ambiente esteja corretamente configurado e as dependências instaladas antes da execução do teste.

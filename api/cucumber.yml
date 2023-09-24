@@ -1,0 +1,3 @@
+# cucumber.yml
+
+default: --format json --out reports/cucumber.json --quiet --format pretty

@@ -1,0 +1,70 @@
+# ViaCEP API Test
+
+## Introdução
+
+Este projeto realiza testes automatizados na API do ViaCEP, utilizando o framework Cucumber e a biblioteca HTTParty para requisições HTTP. O objetivo é garantir que a API forneça os detalhes de um endereço corretamente, tanto para CEPs válidos quanto para inválidos.
+
+## Funcionalidades Testadas
+
+### Consultar CEP no ViaCEP
+
+Como um usuário interessado em obter informações de endereços, quero fazer uma requisição para o ViaCEP com um CEP válido, para receber os detalhes do endereço.
+
+### Cenários
+
+#### Consultar CEP válido
+
+- Dado que faço uma requisição GET para o ViaCEP com CEP "06325040"
+- Então devo receber os detalhes do endereço
+
+#### Consultar CEP inválido
+
+- Dado que faço uma requisição GET para o ViaCEP com um CEP inválido "03423920"
+- Então devo receber uma resposta de erro
+
+## Passos de Execução
+
+### Passo 1: Configuração do Ambiente
+
+- Certifique-se de ter o Ruby instalado na sua máquina.
+
+### Passo 2: Execução dos Testes
+
+1. Clone este repositório.
+2. Abra um terminal na raiz do projeto.
+3. Execute o comando `bundle install` para instalar as dependências.
+4. Execute o comando `cucumber` para rodar os testes.
+
+## Estrutura do Projeto
+
+|-- features
+|   |-- step_definitions
+|   |   |-- via_cep_steps.rb
+|   |-- support
+|   |   |-- custom_http.rb
+|   |-- via_cep.feature
+|-- Gemfile
+|-- README.md
+
+
+- `features/`: Contém os arquivos de feature escritos em Gherkin.
+- `features/step_definitions/`: Contém os passos dos cenários escritos em Ruby.
+- `features/support/`: Contém a classe `CustomHttp` para as requisições HTTP.
+- `Gemfile`: Arquivo de configuração do Bundler para gerenciamento de dependências.
+- `README.md`: Documentação do projeto.
+
+## CustomHttp
+
+```ruby
+require "httparty"
+
+class CustomHttp
+  include HTTParty
+  base_uri "https://viacep.com.br/ws"  # Endereço base do ViaCEP
+
+  def self.get_cep(cep)
+    get("/#{cep}/json/")
+  end
+end
+
+# A classe CustomHttp encapsula os métodos HTTP utilizando a biblioteca HTTParty.
