@@ -1,24 +1,48 @@
+
 # Desafio de Testes de API, Web e Mobile
+
+  
 
 Neste desafio, fui avaliado em três áreas distintas:
 
+  
+
 ## Testes de API (ViaCEP) 🌐
 
+  
+
 - Utilizei o framework Cucumber e a biblioteca HTTParty para testar a API do ViaCEP.
+
 - Garanti que a API fornece os detalhes corretos de um endereço para CEPs válidos e inválidos.
+
+  
 
 ## Testes Web (Ruby com Capybara e Cucumber) 🌐
 
+  
+
 - Automatizei a funcionalidade de login e validação de um dashboard em uma aplicação web.
+
 - Utilizei Capybara e Cucumber para interagir com os elementos da página e escrever cenários de teste em linguagem natural.
+
+  
 
 ## Testes Mobile (Appium com Robot Framework) 📱
 
+  
+
 - Utilizei o framework Robot Framework em conjunto com o Appium para interagir com uma aplicação mobile.
+
 - Infelizmente, não foram fornecidos detalhes específicos sobre a estrutura do projeto para esta área.
+
+  
 
 ## Conclusão ✅
 
+  
+
 Realizar testes em diversas plataformas foi uma experiência valiosa e desafiadora. Cada área apresentou suas particularidades e me permitiu aplicar diferentes habilidades de automação de testes. Estou empolgado para continuar aprendendo e aprimorando minhas habilidades nesta área.
+
+  
 
 Se precisar de mais alguma coisa, estou à disposição! 😊
