@@ -8,6 +8,6 @@ Funcionalidade: Gerenciamento de Admins
 
     Cenário: Credenciais inválidas
       Dado que o usuário está na página de login
-      Quando o usuário insere credenciais inválidas
+      Quando o usuário insere credenciais "login" e "senha" inválidas
       E clica no botão de login
       Então o sistema deve exibir uma mensagem de erro

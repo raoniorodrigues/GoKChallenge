@@ -8,4 +8,8 @@ class BasePagePage
   def na_tela_de_login
     $Validation.valida_texto_pagina(page, "Login")
   end
+
+  def valida_mensagem_erro_login
+    $Validation.valida_texto_pagina(page, "Invalid credentials")
+  end
 end

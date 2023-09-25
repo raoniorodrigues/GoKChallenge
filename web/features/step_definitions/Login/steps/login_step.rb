@@ -9,6 +9,9 @@ end
 
 Quando("clica no botão de login") do
   $LoginPage.clica_btn_login
+end
+
+Quando("valido que estou na tela de Dashboard") do
   $DashboardPage.validarHomeDashboard
 end
 
@@ -19,4 +22,14 @@ end
 
 Então("o usuário deve ser redirecionado para a página de login") do
   $BasePagePage.na_tela_de_login
+end
+
+# Steps de Caminho alteranivo e insucesso
+
+Quando("o usuário insere credenciais {string} e {string} inválidas") do |login, senha|
+  $LoginPage.realiza_login_fail(login, senha)
+end
+
+Então("o sistema deve exibir uma mensagem de erro") do
+  $BasePagePage.valida_mensagem_erro_login
 end

@@ -7,7 +7,7 @@ class DashboardPage
 
   def validarHomeDashboard
     # Verifique se o texto dentro do elemento é igual a "Paul Collings"
-    $Validation.valida_texto_pagina(page, "Paul Collings")
+    $Validation.valida_texto_pagina(page, "Dashboard")
     $Validation.valida_url(page, @dashboard_el["dashboard_url"])
   end
 

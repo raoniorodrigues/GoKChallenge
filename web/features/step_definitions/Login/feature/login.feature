@@ -10,6 +10,7 @@ Funcionalidade: Gerenciamento de Admins
     Dado que o usuário está na página de login
     Quando o usuário insere suas credenciais corretas
     E clica no botão de login
+    E valido que estou na tela de Dashboard
     E o usuário clica no botão de logout
     Então o usuário deve ser redirecionado para a página de login
 

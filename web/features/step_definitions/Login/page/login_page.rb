@@ -12,4 +12,9 @@ class LoginPage
   def clica_btn_login
     $CustomCapybaraDSL.find_and_click(@login_el["login_button_selector"])
   end
+
+  def realiza_login_fail(username, senha)
+    $CustomCapybaraDSL.fill_in_field(@login_el["username_selector"], with: "#{username}")
+    $CustomCapybaraDSL.fill_in_field(@login_el["password_selector"], with: "#{senha}")
+  end
 end
